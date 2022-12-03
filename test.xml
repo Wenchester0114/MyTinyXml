@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<root>
+    <header>ASUS_AURA</header>
+    <version>1.2</version>
+    <funcid>0</funcid>
+    <connecteddevice key="Mainboard_Master">0</connecteddevice>
+    <connecteddevice key="AddressableStrip">8</connecteddevice>
+    <ingroupdevice key="Mainboard_Master">0</ingroupdevice>
+    <ingroupdevice key="AddressableStrip">8</ingroupdevice>
+    <device key="Group">
+        <isenabled>1</isenabled>
+        <scene key="S0">
+            <state>S0</state>
+            <mode key="100">
+                <led key="0">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>0</direction>
+                </led>
+                <led key="1">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>0</direction>
+                </led>
+                <led key="2">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>0</direction>
+                </led>
+                <led key="3">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>0</direction>
+                </led>
+                <led key="4">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>0</direction>
+                </led>
+                <led key="5">
+                    <DeviceName>AddressableStrip</DeviceName>
+                    <type>69632</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <speed>0</speed>
+                    <direction>0</direction>
+                    <hashue2>0</hashue2>
+                    <hue2>0.000000</hue2>
+                </led>
+                <color_type>Plain</color_type>
+                <start_end_color_cycle_start>0.000000</start_end_color_cycle_start>
+                <start_end_color_cycle_range>1.000000</start_end_color_cycle_range>
+                <start_end_color_cycle_end>1.000000</start_end_color_cycle_end>
+                <start_to_end_or_end_to_start>1</start_to_end_or_end_to_start>
+                <effect_path_order>
+                    <order key="Mainboard">0</order>
+                    <order key="Vga">-1</order>
+                    <order key="Keyboard">-1</order>
+                    <order key="Mouse">-1</order>
+                    <order key="GSkillDram">-1</order>
+                    <order key="RogAudioDevices_Microphone">-1</order>
+                    <order key="RogDisplay">-1</order>
+                    <order key="AddressableStrip">7</order>
+                    <order key="RogAudioDevices_Headset">-1</order>
+                    <order key="ODD">-1</order>
+                    <order key="HDD">-1</order>
+                    <order key="HUE">-1</order>
+                    <order key="NB_Keyboard">-1</order>
+                    <order key="Projecter">-1</order>
+                    <order key="Desktop">-1</order>
+                    <order key="NB_Keyboard_LED">-1</order>
+                    <order key="Terminal">-1</order>
+                    <order key="WaterCooler">-1</order>
+                    <order key="Extension_Card">-1</order>
+                    <order key="MousePad">-1</order>
+                    <order key="Add_RGB_CARD">-1</order>
+                    <order key="RogAudioDevices_HeadphoneStand">-1</order>
+                    <order key="Lamp">-1</order>
+                    <order key="EXT_SSD">-1</order>
+                    <order key="M2_SSD">-1</order>
+                    <order key="NOTEBOOK_CHASSIS">-1</order>
+                    <order key="RogAudioDevices_AudioAdapter">-1</order>
+                    <order key="EXTERNAL_GENERAL">-1</order>
+                    <order key="MidiBox">-1</order>
+                    <order key="5Z_Keyboard">-1</order>
+                    <order key="WallPaper">-1</order>
+                    <order key="MATRIX_Headset">-1</order>
+                    <order key="MATRIX_Motherboard">-1</order>
+                    <order key="MATRIX_Keyboard">-1</order>
+                    <order key="MATRIX_Laptop">-1</order>
+                    <order key="MATRIX_Watercooler">-1</order>
+                    <order key="L_Strip">-1</order>
+                    <order key="PHONE">-1</order>
+                    <order key="GAMEPAD">-1</order>
+                    <order key="Xiaomi_device">-1</order>
+                    <order key="MB_AniMe_Matrix">-1</order>
+                    <order key="WaterCooler_Anime_Matrix">-1</order>
+                    <order key="Router">-1</order>
+                </effect_path_order>
+                <effect_speed>-4</effect_speed>
+                <thermal_threshold_one>40</thermal_threshold_one>
+                <thermal_threshold_two>60</thermal_threshold_two>
+                <thermal_value_type>Thermal</thermal_value_type>
+                <music_index>0</music_index>
+                <singlecolor>0</singlecolor>
+            </mode>
+        </scene>
+        <scene key="Non-S0">
+            <state>Non-S0</state>
+            <mode key="5">
+                <led key="0">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="1">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="2">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="3">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="4">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+            </mode>
+        </scene>
+    </device>
+    <device key="Mainboard">
+        <scene key="Non-S0">
+            <state>Non-S0</state>
+            <mode key="5">
+                <led key="0">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="1">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="2">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="3">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+                <led key="4">
+                    <DeviceName>Mainboard_Master</DeviceName>
+                    <type>65536</type>
+                    <color>255</color>
+                    <hue>0.000000</hue>
+                    <saturation>1.000000</saturation>
+                    <lightness>0.500000</lightness>
+                    <hashue2>0.000000</hashue2>
+                    <hue2>0.000000</hue2>
+                    <speed>0</speed>
+                    <direction>-1</direction>
+                </led>
+            </mode>
+        </scene>
+    </device>
+    <strip_rgb_adjust>
+        <srtip_led key="3">
+            <order key="R">0</order>
+            <order key="B">1</order>
+            <order key="G">2</order>
+        </srtip_led>
+        <srtip_led key="4">
+            <order key="R">0</order>
+            <order key="B">1</order>
+            <order key="G">2</order>
+        </srtip_led>
+    </strip_rgb_adjust>
+    <addressable_strip_using>
+        1
+                <addressable_strip_generation_type key="0">1</addressable_strip_generation_type>
+        <static_id key="0">0</static_id>
+        <argb_id key="0">0</argb_id>
+        <addressable_strip_led_count key="0">120</addressable_strip_led_count>
+    </addressable_strip_using>
+    <addressable_strip_terminal_using>0</addressable_strip_terminal_using>
+    <addressable_strip_card_using>0</addressable_strip_card_using>
+    <device key="HUE">
+        <last_ip/>
+    </device>
+    <exclusivemode>1</exclusivemode>
+</root>
