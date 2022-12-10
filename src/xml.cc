@@ -98,14 +98,14 @@ void XmlNode::remove(const std::string& name) {
     }
 }
 
-bool XmlNode::load(const std::string & filename)
+bool XmlNode::load(const std::string& filename)
 {
     Parser p;
     if (!p.loadfile(filename))
     {
         return false;
-    }
-    *this = p.parse();
+    } 
+    *this = *(p.parse());
     return true;
 }
 

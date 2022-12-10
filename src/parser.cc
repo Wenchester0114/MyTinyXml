@@ -9,7 +9,7 @@ Parser::Parser() : _string(""), _index(0) {
 
 }
 bool Parser::loadfile(const std::string& fileName) {
-    
+
     std::ifstream fin(fileName);
     if (fin.fail()) {
         return false;
@@ -21,90 +21,96 @@ bool Parser::loadfile(const std::string& fileName) {
     return true;
 }
 
-XmlNode Parser::parse() {
-    // // parse head
-    // parseDeclaration();
-    // //parse comment 
-    // while (_string.compare(_index, 4, "<!--") == 0) {
-    //     //parseComment();
-    //     skipSpace();
-    // }
-    // //parse element 
-    // parseElement();
+XmlNode* Parser::parse() {
+    parseDeclaration();
+    parseDeclaration();
+    return parseElement();
 }
 
 XmlNode* Parser::parseElement() {
     XmlNode* node = new XmlNode;
-    
-    while (_string[_index] != '\0') {
+
+    skipSpace();
+    if (_string[_index] == '<' && (isalnum(_string[_index + 1]) || _string[_index + 1] == '_')) {
+        //parse name
+        _index++;
+        int pos = _index;
+        while (isalnum(_string[_index]) ||
+            _string[_index] == '-' ||
+            _string[_index] == '_')
+        {
+            _index++;
+        }
+        std::string str = _string.substr(pos, _index - pos);
+        node->setName(str);
         skipSpace();
-        if (_string[_index] == '<' && (isalpha(_string[_index + 1]) || _string[_index + 1] == '_')) {
-            //parse name
-            _index++;
-            int pos = _index;
-            while (isalpha(_string[_index])    || 
-                        _string[_index] == '-' || 
-                        _string[_index] == '_') 
-            {
-                _index++;
-            }
-            //std::cout << _string.substr(pos, _index - pos) << std::endl;
-            node->setName(_string.substr(pos, _index - pos));
-            skipSpace();
-        }
-        //parse attr
-        if (_string[_index] == '_' || isalpha(_string[_index])) {
-            int pos = _index;
-            while (_string[_index] != '=') {
-                _index++;
-            }
-            std::string key = _string.substr(pos, _index - pos);
-            _index += 2;
-            pos = _index;
-            while (_string[_index] != '"') {
-                _index++;
-            }
-            
-            std::string val = _string.substr(pos, _index - pos);
-            node->setAttrs(key, val);
+    }
+    //parse attr
+    if (_string[_index] == '_' || isalnum(_string[_index])) {
+        int pos = _index;
+        while (_string[_index] != '=') {
             _index++;
         }
-        //parse text
-        if (_string[_index] == '>') {
-            skipSpace();
-            int pos = _index;
-            while (_string[_index] != '<') {
-                _index++;
-            }
-            node->setText(_string.substr(pos + 1, _index - pos - 1));
-            
-        }
-        //parse end of node 
-        if (_string[_index] == '<' && _string[_index + 1] == '/') {
+        std::string key = _string.substr(pos, _index - pos);
+        _index += 2;
+        pos = _index;
+        while (_string[_index] != '"') {
             _index++;
-            int pos = _index;
-            while (_string[_index] != '>') {
-                _index++;
-            }
+        }
 
-
-            if (_string.compare(pos + 1, node->getNameSize(), node->getName()) != 0 || node->getNameSize() != _index - pos - 1) {
-                throw std::logic_error("Parse error: The end of node name is diffent from node name.");
-            }
+        std::string val = _string.substr(pos, _index - pos);
+        node->setAttrs(key, val);
+        _index++;
+    }
+    //parse text
+    if (_string[_index] == '>') {
+        _index++;
+        skipSpace();
+        int pos = _index;
+        while (_string[_index] != '<') {
+            _index++;
         }
-        else {
+        std::string str = _string.substr(pos, _index - pos);
+        node->setText(str);
+    }
+    //parse end of node 
+    if (_string[_index] == '<' && _string[_index + 1] == '/') {
+        _index++;
+        int pos = _index;
+        while (_string[_index] != '>') {
+            _index++;
+        }
+
+        if (_string.compare(pos + 1, node->getNameSize(), node->getName()) != 0 || node->getNameSize() != _index - pos - 1) {
+
+            throw std::logic_error("Parse error: The end of node name is diffent from node name.");
+        }
+        _index++;
+
+    }
+    else {
+        while (_string[_index + 1] != '/') {
             node->addSubNode(parseElement());
+            skipSpace();
         }
+        if (_string[_index + 1] == '/') {
+            _index++;
+            while (_string[_index] != '\0' && _string[_index] != '>') {
+                _index++;
+            }
+            _index++;
+        }
+        skipSpace();
     }
     return node;
 }
 
 void Parser::skipSpace() {
-    while (_string[_index] == ' '   || 
-            _string[_index] == '\n' || 
-            _string[_index] == '\r' ||
-            _string[_index] == '\t') 
-    { 
+    while (_string[_index] != '\0' && (_string[_index] == ' ' ||
+        _string[_index] == '\n' ||
+        _string[_index] == '\r' ||
+        _string[_index] == '\t'))
+    {
         _index++;
     }
 }
@@ -135,50 +141,3 @@ bool Parser::parseComment() {
     return true;
 
 }
-
-
-std::string xml::Parser::parseElementName() {
-    /*int pos = 0;
-    if (_string[_index] == '<') {
-        _index++;
-        pos = _index;
-        while (isalpha(_string[_index])) {
-            _index++;
-        }
-    }
-    return _string.substr(pos, _index - pos); */
-    return "";
-}
-std::string Parser::parseElementText() {
-    /* int pos = _index;
-    if (_string[_index] == '>') {
-        _index++;
-        while (_string[_index] != '<') {
-            _index++;
-        }
-    }
-    return _string.substr(pos, _index - pos); */
-    return "";
-}
-std::string Parser::parseElementNameAndAttrKey() {
-    /* int pos = _index;
-    while (isalpha(_string[_index])) {
-        _index++;
-    }
-    return _string.substr(pos, _index - pos); */
-    return "";
-}
-std::string Parser::parseElementAttrVal(){
-    /* int pos = _index;
-    if (_string[_index] == '"') {
-        _index++;
-        while (_string[_index] != '"') {
-            _index++;
-        }
-    }
-    return _string.substr(pos, _index - pos); */
-    return "";
-}
-
-
-
